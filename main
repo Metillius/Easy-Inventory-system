@@ -1,0 +1,19 @@
+public class main {
+
+    public static void main(String[] args) {
+
+
+        Satchel bag = new Satchel(3);
+
+        Weapon weapon1 = new Weapon("sword",5,98);
+        Weapon weapon2 = new Weapon("The Unholy Sword",9,999);
+        Weapon weapon3 = new Weapon("sting",7,345);
+
+        bag.push(weapon2);
+        bag.printSatchel();
+
+    }
+
+
+
+}
