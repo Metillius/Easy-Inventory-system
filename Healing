@@ -1,0 +1,13 @@
+public class Healing {
+
+    String name;
+    double healAmount;
+    int duration;
+
+    public Healing(String name, double healAmount, int duration) {
+        this.name = name;
+        this.healAmount = healAmount;
+        this.duration = duration;
+    }
+
+}
