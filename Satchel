@@ -1,0 +1,68 @@
+
+//classı generic tanımla
+
+public class Satchel {
+
+    private Weapon[] warray;
+
+    private Healing[] harray;
+
+    private int size;
+
+    private int top;
+
+
+    Satchel(int size){
+
+        warray = new Weapon[size];
+        this.size = size;
+        top=-1;
+
+    }
+
+    public void push(Weapon x){
+        if(isFull()){
+            System.out.println("You dont have size in your satchel");
+
+        }
+
+        else{
+            warray[++top] = x;
+        }
+    }
+
+    public Weapon pop(){
+
+        if (isEmpty()){
+            System.out.println("Satchel is already empty!");
+
+        }
+
+
+
+            return warray[top--];
+
+
+
+    }
+
+    public int getSize(){
+        return top +1;
+    }
+
+    public Boolean isEmpty(){
+        return top == -1;
+    }
+
+    public Boolean isFull() {
+        return top == size -1;
+    }
+
+    public void printSatchel(){
+        for (int i = 0; i <= top; i++){
+            System.out.println(warray[i].name +", " );
+        }
+    }
+
+
+}
