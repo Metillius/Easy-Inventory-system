@@ -1,49 +1,48 @@
-
 //classı generic tanımla
 
-public class Satchel {
+import java.util.ArrayList;
+
+public class Satchel <Object> {
 
     private Weapon[] warray;
 
     private Healing[] harray;
+
+    private ArrayList<Object> elements;
+    private Object[] array;
 
     private int size;
 
     private int top;
 
 
-    Satchel(int size){
+    public Satchel(int size){
 
-        warray = new Weapon[size];
+        elements = new ArrayList<>(size);
         this.size = size;
         top=-1;
 
     }
 
-    public void push(Weapon x){
+    public void push(Object x){
         if(isFull()){
             System.out.println("You dont have size in your satchel");
 
         }
 
         else{
-            warray[++top] = x;
+            elements.add(++top, x);
         }
     }
 
-    public Weapon pop(){
+    public Object pop(){
 
         if (isEmpty()){
             System.out.println("Satchel is already empty!");
 
         }
 
-
-
-            return warray[top--];
-
-
-
+            return elements.get(top--);
     }
 
     public int getSize(){
@@ -60,7 +59,7 @@ public class Satchel {
 
     public void printSatchel(){
         for (int i = 0; i <= top; i++){
-            System.out.println(warray[i].name +", " );
+            System.out.println(elements.get(i) +", " );
         }
     }
 
