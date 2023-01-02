@@ -10,4 +10,28 @@ public class Healing {
         this.duration = duration;
     }
 
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getHealAmount() {
+        return healAmount;
+    }
+
+    public void setHealAmount(double healAmount) {
+        this.healAmount = healAmount;
+    }
+
+    public int getDuration() {
+        return duration;
+    }
+
+    public void setDuration(int duration) {
+        this.duration = duration;
+    }
 }
